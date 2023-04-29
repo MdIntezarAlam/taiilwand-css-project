@@ -1,0 +1,26 @@
+=>>>>>>>>>>>>How to setup Tailwind Css when using HTML not in react js=>>>>>>>>>>>
+1=> open vs code 
+2 npm init -y
+3 npm install -D tailwindcss
+4 npx tailwindcss init
+5 make css folder and mak an input.css file and paste this line inside input file
+             @tailwind base;
+             @tailwind components;
+             @tailwind utilities;
+
+7 go to tailwind.config.js inside content paste this line
+            content: ["./html/*.{html,js}"],
+
+8 make an html folder and inside this create main-css.css file 
+10 in hmtl folder create html file whatever we want use link tag and import main-css.css 
+      like this=>    <link rel="stylesheet" href="main-css.css">
+          
+11 run this command in terminal
+            npx tailwindcss -i ./css/input.css -o ./html/main-css.css --watch
+
+11 in packge.json file add this script below script command
+        "dev":"tailwindcss -i ./css/input.css -o ./html/main-css.css --watch"
+
+12 finally run 
+         npm run dev
+          and html file open with live server
