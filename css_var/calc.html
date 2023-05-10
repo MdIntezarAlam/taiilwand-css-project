@@ -1,0 +1,60 @@
+<!-- how to use clc in css -->
+<!-- 
+    clc fun mai only total width mai se minus karna hai jo bhee class ko width ya  hight dena hai
+ -->
+
+ <!-- Note parent div ka height hai 100vh
+   box_1 ka height hai 20vh
+   box_3 ka height hai 20vh
+   box_2 ka height ko pura dene ke leye 1 and 3 ka add kar ke minus kar dena hai clc mai.
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0
+        }
+
+        .div {
+            width: 100%;
+            height: 100vh;
+            background-color: #909090;
+        }
+
+        .box_1 {
+            width: 100%;
+            height: 20vh;
+            background-color: #000;
+        }
+
+        .box_2 {
+            width: 100%;
+            height: calc(100vh - 40vh);
+            background-color: #180cef;
+        }
+        
+        .box_3 {
+            width: 100%;
+            height: 20vh;
+            background-color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="div">
+        <div class="box_1">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos facere dolore doloribus?</div>
+        <div class="box_2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium magnam officia ratione.</div>
+        <div class="box_3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium magnam officia ratione.</div>
+    </div>
+</body>
+
+</html>

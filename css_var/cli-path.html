@@ -1,0 +1,117 @@
+the main pupose is to avoid border-radius
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 100%;
+            height: 100vh;
+            background-color: #909090;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* 1.radius, 2.konsa point se cirle banana hai */
+        /* in middle */
+        .clip_path {
+            width: 100%;
+            height: 100%;
+            clip-path: circle(10% at 50% 50%);
+        }
+
+        /* right me dena hai tho x-axis 100 and y-axis- 0 */
+        .clip_path {
+            width: 100%;
+            height: 100%;
+            background-image: linear-gradient(to top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
+            clip-path: circle(10% at 100% 0%);
+            position: fixed;
+            top: 0px;
+        }
+
+        /* right ke leye=> left x and y axis 0 hona hai */
+        .clip_path2 {
+            width: 100%;
+            height: 100%;
+            background-image: linear-gradient(to top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
+            clip-path: circle(10% at 0% 0%);
+            position: fixed;
+            top: 0px;
+        }
+
+        /* bottom left mai dena hai to  x-axis 0 and y-axis 100% */
+        .clip_path_3 {
+            width: 100%;
+            height: 100%;
+            background-image: linear-gradient(to top, #051937, #004d7a, #ff197d, #e41717, #a8eb12);
+            clip-path: circle(10% at 0% 100%);
+            position: fixed;
+            right: 0;
+            bottom: 0;
+        }
+
+        .clip_path_4 {
+            width: 20%;
+            height: 30%;
+            background-color: cadetblue;
+            clip-path: circle(50% at 110% 100%);
+            position: fixed;
+            right: 0;
+            bottom: 0;
+        }
+
+        .clip_path_star {
+            width: 100%;
+            height: 100%;
+            clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+
+        }
+
+        /* filter for images it has sum properties... */
+        img {
+            width: 200px;
+            height: 300px;
+            /* filter: brightness(30%); */
+            filter: contrast(200%);
+        }
+
+        /* bottom right mai dena hai to  x-axis 100 and y-axis 0% */
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <p class="clip_path"></p>
+        <p class="clip_path2"></p>
+        <p class="clip_path_3"></p>
+        <p class="clip_path_4"></p>
+
+        <!-- from websites -->
+        <!-- reference=
+        https://bennettfeely.com/clippy/
+        -->
+        <img src="https://www.imgacademy.com/sites/default/files/styles/scale_1700w/public/2022-07/img-homepage-meta_0.jpg?itok=LMirU0Ik"
+            class="clip_path_star">
+        <div>
+
+            <img
+                src="https://www.imgacademy.com/sites/default/files/styles/scale_1700w/public/2022-07/img-homepage-meta_0.jpg?itok=LMirU0Ik">
+        </div>
+
+        <!-- from websites -->
+    </div>
+</body>
+
+</html>
